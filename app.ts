@@ -1,0 +1,26 @@
+import { CompanyAccount } from './class/CompanyAccount'
+import { PeopleAccount } from './class/PeopleAccount'
+import { MasterAccount } from './class/MasterAccount'
+
+const peopleAccount: PeopleAccount = new PeopleAccount(1, 'Pedro', 10, true)
+console.log(peopleAccount)
+peopleAccount.deposit(20)
+const companyAccount: CompanyAccount = new CompanyAccount('DIO', 22, true)
+companyAccount.deposit(20)
+const masterAccount: MasterAccount = new MasterAccount(2, 'Master', 2027, true)
+companyAccount.deposit(20)
+console.log(companyAccount)
+companyAccount.deposit(50)
+companyAccount.getBalance()
+companyAccount.withdraw(20)
+companyAccount.getBalance()
+companyAccount.withdraw(200)
+companyAccount.getBalance()
+companyAccount.getLoan(150)
+companyAccount.getBalance()
+masterAccount.deposit(200)
+masterAccount.getBalance()
+masterAccount.withdraw(50)
+masterAccount.getBalance()
+masterAccount.deposit(150)
+masterAccount.getBalance()
